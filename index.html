@@ -43,24 +43,37 @@
             color: #99003d;
         }
 
-        .btn-calculator {
-            width: 150px;
+       
+        .btn-grad {
+            background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff 51%, #ff6e7f 100%);
+            margin: 20px;
+            padding: 10px 30px;
+           margin-left: 140px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: #b30047;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
             display: block;
-            margin: 10px auto;
-            font-size: 20px;
-            background-color: #b30047;
             border: none;
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
             color: #fff;
-            border: none;
-            border-radius: 20px;
-            padding: 5px 10px;
-            cursor: pointer;
+            text-decoration: none;
         }
 
         @media screen and (max-width:760px) {
             .container {
                 width: 90%;
             }
+            .btn-grad {
+                width:30%;
+            }
+                
+            
         }
     </style>
 </head>
@@ -72,8 +85,10 @@
         <input type="text" placeholder="Enter Breadth" class="number-input" id="num2" />
         <p class="answer" id="ans"><b>Answer :</b></p>
 
-        <button type="button" class="btn-calculator" onclick="calculate()">Calculate</button>
-        <button type="button" class="btn-calculator" onclick="reset()">Reset</button>
+        <button type="button" class="btn-grad" onclick="calculate()"><b>Calculate</b></button>
+        <button type="button" class="btn-grad" onclick="reset()"><b>Reset</b></button>
+
+
     </div>
 
     <script>
